@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' />
+<meta charset='utf-8'>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<style></style>
+<title>FB2</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="playcanvas-stable.min.js"></script>
+<script src="__settings__.js"></script>
+</head>
+<body>
+<script src="__start__.js"></script>
+<script src="__loading__.js"></script>
+<script>
+         const deniedMsg = "<h1 style='text-align:center;color:#ffffff;'>Access Denied</h1><p style='text-align:center;color:#ffffff;'>The game was removed and can now only be played on the main domain</p><p style='text-align:center;color:#ffffff;'><a href='https://flappybird.ee' style='color:#ffffff;text-decoration:underline;'>Play the Game here</a></p>";
+const isLoadedInIframe = window.self !== window.top;
+const isHostnameValid = window.location.hostname.toLowerCase().endsWith("flappybird.ee") || (isLoadedInIframe && window.parent.location.hostname.toLowerCase().endsWith("flappybird.ee"));
+
+if (!isLoadedInIframe || !isHostnameValid) {
+  showError(deniedMsg);
+}
+
+function showError(msg) {
+  document.body.style.cssText = "background-color:#000000;display:flex;justify-content:center;align-items:center;flex-direction:column;";
+  document.body.innerHTML = msg;
+  throw new Error("Access Denied");
+}
+    </script>
+<script>
+	
+
+
+
+	</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7ed381c07e5a20ef","version":"2023.7.0","r":1,"token":"94a84dbcc67c42a588aced197abcb436","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
