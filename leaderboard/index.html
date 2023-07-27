@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flappy Bird - Leaderboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+<meta charset="UTF-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en">
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="cache-control" content="max-age=0" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta property="og:site_name" content="Flappy Bird World Leaderboard" />
+<meta property="article:publisher" content="https://www.facebook.com/w3technic/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@w3technic" />
+<meta name="twitter:creator" content="@w3technic" />
+<meta name="twitter:title" content="Play Flappy Bird Game" />
+<meta property="og:title" content="Play Flappy Bird Game" />
+<meta name="twitter:description" content="Flappy Bird World Leaderboard" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="Flappy Bird World Leaderboard." />
+<meta property="og:url" content="https://flappy-bird.fun/" />
+<link rel="canonical" href="https://flappy-bird.fun/leaderboard" />
+<meta name="title" content="Flappy Bird World Leaderboard" />
+<meta name="description" content="Flappy Bird World Leaderboard" />
+<meta property="og:image" content="https://flappy-bird.fun/feature-image.png" />
+<meta name="twitter:image" content="https://flappy-bird.fun/feature-image.png" />
+<meta itemprop="image" content="https://flappy-bird.fun/feature-image.png" />
+<link rel="icon" href="https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/DLgXf1zr/thumbs/180.jpg">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/gracehuynhh/doodlejump/w3navigation.css" />
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6875580793823494" crossorigin="anonymous"></script>
+<style>
+
+    tr:hover {
+        background-color: #ddd;
+    }
+    
+    form {
+  margin: 20px auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.gradient, footer{
+      background: linear-gradient(45deg, #2c3034, #1b1e21)!important;
+
+}
+
+.glowing {
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8a00, 0 0 70px #ff8a00, 0 0 80px #ff8a00, 0 0 100px #ff8a00, 0 0 150px #ff8a00;
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff8a00, 0 0 70px #ff8a00, 0 0 80px #ff8a00, 0 0 100px #ff8a00, 0 0 150px #ff8a00;
+  }
+  100% {
+    box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff8a00, 0 0 80px #ff8a00, 0 0 90px #ff8a00, 0 0 110px #ff8a00, 0 0 160px #ff8a00;
+  }
+}
+
+
+
+
+
+table tbody tr:first-of-type,
+table tbody tr:not(:first-of-type):hover {
+  color: yellow !important;
+  cursor: pointer;
+  background-color: #333;
+  transition: all 0.2s ease-in-out, background-color 0.5s ease-in-out; /* add transition */
+  animation: neon 1.1s infinite alternate;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+table tbody tr:not(:first-of-type):not(:hover) {
+  color: inherit !important;
+  background-color: transparent;
+}
+
+@keyframes neon {
+  from {
+    box-shadow: 0 0 10px #FF00FF;
+  }
+  to {
+    box-shadow: 0 0 20px #9D00FF;
+  }
+}
+
+@keyframes glowing-spin {
+  from {
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px #FF00FF;
+  }
+  to {
+    transform: rotate(360deg);
+    box-shadow: 0 0 20px #9D00FF;
+  }
+}
+
+
+
+.table>:not(caption)>*>*{
+border:0!important;
+}
+table tr {
+  height: 3.5rem!important;
+  vertical-align: middle!important;
+}
+
+tr td:first-child, th:first-child {
+  font-size: 1.4rem;
+  text-align:center;
+}
+
+
+
+
+.flappy-text {
+background: -webkit-linear-gradient(#9D50BB, #6E48AA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-info{
+    border-color:#6E48AA;
+    background-color:#6E48AA;
+}
+.btn-info:hover{
+    border-color:#9D50BB;
+    background-color:#9D50BB;
+}
+.btn-light{
+    background-color:#fd0;
+}
+.content{
+    max-width:700px;
+}
+
+.active{background-color:rgba(0,0,0,.5)}
+
+
+</style>
+</head>
+<body class="bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container-fluid">
+<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link " aria-current="page" href="/">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="/leaderboard">Leaderboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/old">Old Flappy Bird</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#" id="fullscreen"><svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 15V16C6 17.1046 6.89543 18 8 18H9M18 15V16C18 17.1046 17.1046 18 16 18H15M6 9V8C6 6.89543 6.89543 6 8 6H9M18 9V8C18 6.89543 17.1046 6 16 6H15" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></a>
+</li>
+<li class="nav-item">
+<a onclick="tweet('Play Flappy Bird Online', 'https://flappybird.ee')" class="nav-link" href="#"><svg fill="#fff" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310 310" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="XMLID_826_"> <path id="XMLID_827_" d="M302.973,57.388c-4.87,2.16-9.877,3.983-14.993,5.463c6.057-6.85,10.675-14.91,13.494-23.73 c0.632-1.977-0.023-4.141-1.648-5.434c-1.623-1.294-3.878-1.449-5.665-0.39c-10.865,6.444-22.587,11.075-34.878,13.783 c-12.381-12.098-29.197-18.983-46.581-18.983c-36.695,0-66.549,29.853-66.549,66.547c0,2.89,0.183,5.764,0.545,8.598 C101.163,99.244,58.83,76.863,29.76,41.204c-1.036-1.271-2.632-1.956-4.266-1.825c-1.635,0.128-3.104,1.05-3.93,2.467 c-5.896,10.117-9.013,21.688-9.013,33.461c0,16.035,5.725,31.249,15.838,43.137c-3.075-1.065-6.059-2.396-8.907-3.977 c-1.529-0.851-3.395-0.838-4.914,0.033c-1.52,0.871-2.473,2.473-2.513,4.224c-0.007,0.295-0.007,0.59-0.007,0.889 c0,23.935,12.882,45.484,32.577,57.229c-1.692-0.169-3.383-0.414-5.063-0.735c-1.732-0.331-3.513,0.276-4.681,1.597 c-1.17,1.32-1.557,3.16-1.018,4.84c7.29,22.76,26.059,39.501,48.749,44.605c-18.819,11.787-40.34,17.961-62.932,17.961 c-4.714,0-9.455-0.277-14.095-0.826c-2.305-0.274-4.509,1.087-5.294,3.279c-0.785,2.193,0.047,4.638,2.008,5.895 c29.023,18.609,62.582,28.445,97.047,28.445c67.754,0,110.139-31.95,133.764-58.753c29.46-33.421,46.356-77.658,46.356-121.367 c0-1.826-0.028-3.67-0.084-5.508c11.623-8.757,21.63-19.355,29.773-31.536c1.237-1.85,1.103-4.295-0.33-5.998 C307.394,57.037,305.009,56.486,302.973,57.388z"></path> </g> </g></svg></a>
+</li>
+<li class="nav-item">
+<a onclick="shareOnFacebook('Play Flappy Bird Online', 'https://flappybird.ee')" class="nav-link" href="#"><svg fill="#fff" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058" fill-rule="evenodd"></path> </g></svg></a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="bg-dark gradient text-secondary text-center">
+<div class="container">
+<div class="py-3">
+<h1 class="display-5 fw-bold text-white">👑<a class="text-decoration-none flappy-text" href="/leaderboard"> Leaderboard</a></h1>
+<div class="col-lg-6 mx-auto">
+<p class="fs-5 mb-4">This is the world leaderboard of the game Flappy Bird.<br>Want to see your name on the leaderboard? Play the game now!</p>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+<a href="/" type="button" class="btn btn-info btn-sm px-4 me-sm-3 fw-bold ">🕹️ Play Flappy Bird</a>
+<a target="_blank" href="https://www.buymeacoffee.com/gracehuynh" type="button" class="btn btn-light btn-sm px-4 me-sm-3 fw-bold">☕ Buy me a coffee</a>
+<a target="_blank" href="https://discord.gg/Uv94jrXQfX" type="button" class="btn btn-light btn-sm px-4 me-sm-3 fw-bold">❤ Discord</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container content text-light mt-3 ">
+<div id="form-container"></div>
+<div id="list" class="row">
+<div class="col-md-6">
+<div class="card text-white bg-dark">
+<div class="card-header">
+<h5 class="mb-0">Last Hour Leaderboard</h5>
+</div>
+<div class="card-body">
+<div class="table"><table class="table table-dark table-striped"><thead><tr><th>#</th><th>Username</th><th>Score</th></tr></thead><tbody><tr onclick="shareThisScore(this)"><td>1🥇</td><td><img src='https://flagsapi.com/US/flat/16.png' alt='US' style='margin-right: 2px;'>nataliaoh</td><td>388</td></tr><tr onclick="shareThisScore(this)"><td>2🥈</td><td><img src='https://flagsapi.com/MZ/flat/16.png' alt='MZ' style='margin-right: 2px;'>supermario</td><td>233</td></tr><tr onclick="shareThisScore(this)"><td>3🥉</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>powerrussia</td><td>177</td></tr><tr onclick="shareThisScore(this)"><td>4</td><td><img src='https://flagsapi.com/MA/flat/16.png' alt='MA' style='margin-right: 2px;'>xoxolove</td><td>129</td></tr><tr onclick="shareThisScore(this)"><td>5</td><td><img src='https://flagsapi.com/SG/flat/16.png' alt='SG' style='margin-right: 2px;'>chocolate</td><td>122</td></tr><tr onclick="shareThisScore(this)"><td>6</td><td><img src='https://flagsapi.com/PW/flat/16.png' alt='PW' style='margin-right: 2px;'>piano</td><td>88</td></tr><tr onclick="shareThisScore(this)"><td>7</td><td><img src='https://flagsapi.com/GR/flat/16.png' alt='GR' style='margin-right: 2px;'>grasshopper</td><td>41</td></tr><tr onclick="shareThisScore(this)"><td>8</td><td><img src='https://flagsapi.com/TV/flat/16.png' alt='TV' style='margin-right: 2px;'>volo</td><td>39</td></tr><tr onclick="shareThisScore(this)"><td>9</td><td><img src='https://flagsapi.com/CR/flat/16.png' alt='CR' style='margin-right: 2px;'>cupcake</td><td>16</td></tr></tbody></table></div> </div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card text-white bg-dark">
+<div class="card-header">
+<h5 class="mb-0">24-Hour Leaderboard</h5>
+</div>
+<div class="card-body">
+<div class="table"><table class="table table-dark table-striped"><thead><tr><th>#</th><th>Username</th><th>Score</th></tr></thead><tbody><tr onclick="shareThisScore(this)"><td>1🥇</td><td><img src='https://flagsapi.com/IT/flat/16.png' alt='IT' style='margin-right: 2px;'>pplankton</td><td>1696</td></tr><tr onclick="shareThisScore(this)"><td>2🥈</td><td><img src='https://flagsapi.com/US/flat/16.png' alt='US' style='margin-right: 2px;'>nataliaoh</td><td>388</td></tr><tr onclick="shareThisScore(this)"><td>3🥉</td><td><img src='https://flagsapi.com/US/flat/16.png' alt='US' style='margin-right: 2px;'>bird</td><td>320</td></tr><tr onclick="shareThisScore(this)"><td>4</td><td><img src='https://flagsapi.com/MZ/flat/16.png' alt='MZ' style='margin-right: 2px;'>supermario</td><td>233</td></tr><tr onclick="shareThisScore(this)"><td>5</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>kepocintik</td><td>197</td></tr><tr onclick="shareThisScore(this)"><td>6</td><td><img src='https://flagsapi.com/US/flat/16.png' alt='US' style='margin-right: 2px;'>ellie</td><td>182</td></tr><tr onclick="shareThisScore(this)"><td>7</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>powerrussia</td><td>177</td></tr><tr onclick="shareThisScore(this)"><td>8</td><td><img src='https://flagsapi.com/EC/flat/16.png' alt='EC' style='margin-right: 2px;'>daisycuiser</td><td>134</td></tr><tr onclick="shareThisScore(this)"><td>9</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>kepocintik</td><td>133</td></tr><tr onclick="shareThisScore(this)"><td>10</td><td><img src='https://flagsapi.com/MA/flat/16.png' alt='MA' style='margin-right: 2px;'>xoxolove</td><td>129</td></tr><tr onclick="shareThisScore(this)"><td>11</td><td><img src='https://flagsapi.com/SG/flat/16.png' alt='SG' style='margin-right: 2px;'>chocolate</td><td>122</td></tr><tr onclick="shareThisScore(this)"><td>12</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>kepocintik</td><td>122</td></tr><tr onclick="shareThisScore(this)"><td>13</td><td><img src='https://flagsapi.com/WS/flat/16.png' alt='WS' style='margin-right: 2px;'>nataliaoh</td><td>113</td></tr><tr onclick="shareThisScore(this)"><td>14</td><td><img src='https://flagsapi.com/GQ/flat/16.png' alt='GQ' style='margin-right: 2px;'>honeybee</td><td>113</td></tr><tr onclick="shareThisScore(this)"><td>15</td><td><img src='https://flagsapi.com/NZ/flat/16.png' alt='NZ' style='margin-right: 2px;'>jaimee</td><td>112</td></tr><tr onclick="shareThisScore(this)"><td>16</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>kepocintik</td><td>100</td></tr><tr onclick="shareThisScore(this)"><td>17</td><td><img src='https://flagsapi.com/ID/flat/16.png' alt='ID' style='margin-right: 2px;'>rhomarona</td><td>91</td></tr><tr onclick="shareThisScore(this)"><td>18</td><td><img src='https://flagsapi.com/NZ/flat/16.png' alt='NZ' style='margin-right: 2px;'>jaimeee</td><td>90</td></tr><tr onclick="shareThisScore(this)"><td>19</td><td><img src='https://flagsapi.com/PW/flat/16.png' alt='PW' style='margin-right: 2px;'>piano</td><td>88</td></tr><tr onclick="shareThisScore(this)"><td>20</td><td><img src='https://flagsapi.com/RU/flat/16.png' alt='RU' style='margin-right: 2px;'>tlam</td><td>79</td></tr></tbody></table></div> </div>
+</div>
+</div>
+<div class="row text-center">
+<div id="fact-container">
+Fact: <a class="text-decoration-none flappy-text" href="/blog/20-facts-about-flappy-bird" id="fact"></a>
+</div>
+</div>
+</div>
+<div class="card bg-dark text-white">
+<div class="card-body">
+<h5 class="card-title mb-4">Leaderboard Stats</h5>
+<div class="row">
+<div class="col-md-3">
+<div class="card gradient text-white">
+<div class="card-body">
+<h6 class="card-title">Total Rows</h6>
+<p class="card-text">6925</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card gradient text-white">
+<div class="card-body">
+<h6 class="card-title">Average Score</h6>
+<p class="card-text">68.28</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card gradient text-white">
+<div class="card-body">
+<h6 class="card-title">Best Score</h6>
+<p class="card-text"><img src='https://flagsapi.com/KR/flat/16.png' alt='KR' style='margin-right: 2px;'>8308</p>
+</div>
+</div>
+</div>
+<div class="col-md-3">
+<div class="card gradient text-white">
+<div class="card-body">
+<h6 class="card-title">Best Player</h6>
+<p class="card-text"><img src='https://flagsapi.com/KR/flat/16.png' alt='KR' style='margin-right: 2px;'>ALTLGT</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    // Get the value of the "data" parameter from the URL hash
+    const hash = window.location.hash;
+    const token = hash.substring(hash.indexOf('=') + 1, hash.indexOf('&'));
+    const score = hash.substring(hash.lastIndexOf('=') + 1);
+
+
+    var data = decodeURIComponent(token); // Decode the URL-encoded value
+    var dataScore = decodeURIComponent(score);
+    
+
+    // Show the form if the "data" parameter is present in the URL
+    if (data && dataScore) {
+        
+        
+        let check = checkData(data);
+        if(check !== false){
+            var formContainer = document.getElementById("form-container");
+            var form = document.createElement("form");
+            form.id = "submit-form";
+            form.innerHTML = `
+                
+            <h1 class="mt-5">Submit Your Score: ${dataScore}</h1>
+            <div class="form-group">
+                <input placeholder="Your name" type="text" class="form-control" id="username" name="username">
+            </div>
+            
+<div class="form-group mb-3">
+<select class="form-select" id="country" name="country">
+    <option value="">Select your country...</option>
+ 
+</select>
+</div>
+        
+
+            <button type="button" class="btn btn-primary" onclick="submitScore()">Submit</button>
+                        <div id="msg"></div>
+
+        `;
+        formContainer.appendChild(form);
+        populateCountrySelectBox();
+        //console.log(data);
+        document.getElementById("submit-form").addEventListener("submit", function(event) {
+// prevent the default form submission behavior
+event.preventDefault();
+submitScore();
+
+// your form submission logic goes here
+});  
+   
+
+        }
+        
+    }
+function populateCountrySelectBox() {
+  const selectBox = document.getElementById('country');
+  const apiUrl = '/api/independent.json';
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+      data.sort((a, b) => (a.name.common > b.name.common) ? 1 : -1);
+      for (const country of data) {
+        const option = document.createElement('option');
+        option.value = country.cca2;
+        option.textContent = country.name.common;
+        selectBox.appendChild(option);
+      }
+    })
+    .catch(error => console.error('Error fetching countries:', error));
+}
+
+
+    
+function checkData(data) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/leaderboard/add', false);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send('action=check&token=' + data);
+    var response = JSON.parse(xhr.responseText);
+    if (response.success) {
+            return true;
+        
+    } else {
+        return false;
+    }
+}
+
+
+    // Submit the form using AJAX when the button is clicked
+ function submitScore() {
+        var xhr = new XMLHttpRequest();
+        var formData = new FormData();
+        formData.append("username", document.getElementById("username").value);
+        formData.append("country", document.getElementById("country").value);
+        formData.append("token", data);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("msg").innerHTML = response.message;
+                } else {
+                    document.getElementById("msg").innerHTML = response.message;
+                }
+            }
+        };
+        xhr.open("POST", "/leaderboard/add");
+        xhr.send(formData);
+    }
+    
+
+
+
+function tweet(text, link) {
+  // Set the URL for the Twitter share popup
+  const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`;
+  
+  // Calculate the position for the center of the screen
+  const left = screen.width / 2 - 275;
+  const top = screen.height / 2 - 175;
+  
+  // Open the Twitter share popup in the center of the screen
+  window.open(url, 'Share on Twitter', `width=550,height=350,top=${top},left=${left}`);
+}
+
+function shareOnFacebook(text, link) {
+  // Set the URL for the Facebook share popup
+  const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}&quote=${encodeURIComponent(text)}`;
+  
+  // Calculate the position for the center of the screen
+  const left = screen.width / 2 - 300;
+  const top = screen.height / 2 - 200;
+  
+  // Open the Facebook share popup in the center of the screen
+  window.open(url, 'Share on Facebook', `width=600,height=400,top=${top},left=${left}`);
+}
+
+
+function shareThisScore(trElement) {
+    const tdElements = trElement.getElementsByTagName('td');
+    const value = tdElements[1].textContent + " is currently ranked #" +tdElements[0].textContent+ " with " +tdElements[2].textContent+ " points on Flappy Bird, can you beat that? #flappybird #leaderboard";
+    
+    
+    tweet(value, "https://flappybird.ee");
+  }
+  showFlappyBirdFact();
+  function showFlappyBirdFact() {
+  const facts = [
+    "Flappy Bird was created by Dong Nguyen in 2013.",
+    "The game was originally released for iOS devices in May 2013.",
+    "At its peak, Flappy Bird was making $50,000 a day in advertising revenue.",
+    "Dong Nguyen removed Flappy Bird from app stores in February 2014.",
+    "The game was praised for its addictive gameplay and criticized for its difficulty.",
+    "There are countless clones and knockoffs of Flappy Bird available on app stores.",
+    "The highest score ever recorded in Flappy Bird is 999.",
+    "Dong Nguyen has since released other successful games, including Swing Copters and Ninja Spinki Challenges!!",
+    "Flappy Bird has become a cultural phenomenon and inspired countless memes and parodies.",
+    "The original Flappy Bird game can still be found on some older devices and online archives.",
+    "The Flappy Bird character is a yellow bird with a round body and a small beak.",
+    "The pipes in Flappy Bird were inspired by the pipes in the Mario games.",
+    "Flappy Bird was removed from app stores due to its creator's concern over its addictive nature.",
+    "Dong Nguyen has stated that he has no plans to re-release Flappy Bird.",
+    "Flappy Bird has been called one of the most frustrating games ever made.",
+    "Flappy Bird has been parodied in numerous television shows and movies, including The Simpsons and The Lego Movie.",
+    "The Flappy Bird theme song is a simple melody played on a loop throughout the game.",
+    "There are numerous YouTube channels dedicated to Flappy Bird gameplay and strategy.",
+    "Flappy Bird was downloaded over 50 million times before it was removed from app stores."
+  ];
+  
+  const randomFact = facts[Math.floor(Math.random() * facts.length)];
+  
+  const factElement = document.getElementById('fact');
+  factElement.innerText = randomFact;
+}
+
+
+  var iframe = document.body;
+
+        // aggregate fullscreen to one method
+        iframe.requestFullScreen = iframe.requestFullScreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullScreen;
+        var button = document.getElementById('fullscreen');
+
+        // detect fullscreen is supported
+        if (iframe.requestFullScreen) {
+            button.classList.add('available');
+            button.addEventListener('click', function () {
+                iframe.requestFullScreen();
+
+            }, false);
+        }
+
+        // focus the iframe window so that keyboard works.
+        // (Chrome Fix: do this after the iframe has loaded
+        // otherwise gamepads don't work)
+        iframe.addEventListener('load', function () {
+            iframe.contentWindow.focus();
+        });
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+<footer class="bg-dark text-center text-lg-start text-light gradient mt-3">
+
+<div class="text-center p-3">
+© Copyright 2023
+<a class="text-decoration-none flappy-text" href="https://flappy-bird.fun/">FlappyBird.ee</a> <br> Updated on: 14:23:27 - 07/27/2023 UTC </div>
+
+</footer>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7ed58a51adb104d5","version":"2023.7.0","r":1,"token":"94a84dbcc67c42a588aced197abcb436","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
