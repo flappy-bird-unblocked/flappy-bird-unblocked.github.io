@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click to Play</title>
+<style>
+.c-button {
+  min-width: 100%;
+  font-family: fantasy;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #000000;
+  color: #fff;
+  padding: 0px 46px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.c-button:hover {
+  background: #320d90;
+}
+
+.c-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+  
+.c-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+<button class="c-button">CLICK TO PLAY NEW*</button>
+
+<script>
+var urlObj = new window.URL(window.location.href);
+var url = "https://sd592g.github.io/zj684od4lfg/";
+
+if (url) {
+    var win;
+
+    document.querySelector('.c-button').onclick = function() {
+        if (win) {
+            win.focus();
+        } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+
+            var interval = setInterval(function() {
+                if (win.closed) {
+                    clearInterval(interval);
+                    win = undefined;
+                }
+            }, 500);
+        }
+    };
+}
+</script>
+</body>
+</html>
